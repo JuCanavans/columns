@@ -24,20 +24,22 @@ body{
     background-color: var(--background-color);
     font-size: 15px;
     font-family: var(--font-family-primary);
+    overflow: auto
 }
 
 .main{
-    overflow: hidden;
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
 
 .main-section{
-    border-radius: 10px;
+    width: auto;
+    height: 500px;
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
+    border-radius: 15px;
 }
 
 .section-container-oranje{
@@ -79,11 +81,8 @@ body{
     line-height: 1.6;
 }
 
-.secation-button-div{
-    text-align: center;
-}
-
-.teste{
+.section-buntton-div{
+    display: block;
     position: relative;
 }
 
@@ -139,30 +138,32 @@ body{
     letter-spacing: 2px;
 }
 
-@media screen and (max-width: 1338px){
+@media screen  and (max-width: 1531px){
+    .main{
+        width: 80%;
+    }
+}
+
+@media screen  and (max-width: 954px){
+    .main{
+        margin: 10% 0;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none; 
+        width: 100%;
+    }
     .main-section{
         display: flex;
         flex-direction: column;
-        width: 40%;
-        margin: 15% 0;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .main-section{
-        width: 100%;
-        height: auto;
         align-items: center;
+        width: auto;
+        height: auto;
+    }
+    .section-container-oranje{
+        border-radius: 15px 15px 0 0;
+    }
+    .section-container-blue{
+        border-radius: 0 0 15px 15px;
     }
 }
-
-/*
-.main-section{
-    border-radius: 10px;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-}*/
